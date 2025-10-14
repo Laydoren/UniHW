@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опрос студентов первого курса</title>
+    <link rel="stylesheet" type="text/css" href="./css/style.css"
+</head>
+
+<body>
+    <h1>Опрос среди студентов первого курса</h1>
+    <h2>«Что вы думаете об обучении в университете?»</h2>
+    <form oninput="forrange.value=satisfaction.value">
+        <fieldset>
+            <legend>Персональные данные</legend>
+            <table>
+                    <tr>
+                        <td>
+                            <label for="name" class="required">Фамилия и имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </td>
+                        <td>
+                            <label for="email" class="required">Электронная почта</label>
+                            <input type="email" id="email" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="faculty" class="required">Факультет</label>
+                            <select id="faculty" name="faculty" required>
+                                <option value="" disabled selected>Выберите факультет</option>
+                                <option value="fbki">Факультет бизнес-коммуникаций и информатики</option>
+                                <option value="chemistry">Химический факультет</option>
+                                <option value="geo">Географический факультет</option>
+                                <option value="natural">Естественных наук</option>
+                                <option value="medical">Медицинский</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+        </fieldset>
+        <fieldset>
+                <legend>Впечатления от обучения</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label>Как вы оцениваете качество преподавания?</label>
+                            <div class="radio-group">
+                                <label><input type="radio" name="teaching_quality" value="excellent" required checked> Отлично</label>
+                                <label><input type="radio" name="teaching_quality" value="good"> Хорошо</label>
+                                <label><input type="radio" name="teaching_quality" value="satisfactory"> Удовлетворительно</label>
+                                <label><input type="radio" name="teaching_quality" value="poor"> Плохо</label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="satis">
+                            <label for="satisfaction">Насколько вы удовлетворены выбранной специальностью от 1 до 10?</label>
+                            <div>
+                                <label>1</label> <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5"> <label>10</label>
+                                <output name="forrange" class="mark">5</output>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Какие аспекты обучения вам нравятся больше всего? (можно выбрать несколько)</label>
+                            <div class="checkbox-group">
+                                <label><input type="checkbox" name="liked_aspects" value="teachers"> Преподаватели</label>
+                                <label><input type="checkbox" name="liked_aspects" value="subjects"> Учебные предметы</label>
+                                <label><input type="checkbox" name="liked_aspects" value="atmosphere"> Атмосфера в университете</label>
+                                <label><input type="checkbox" name="liked_aspects" value="facilities"> Оборудование и помещения</label>
+                                <label><input type="checkbox" name="liked_aspects" value="schedule"> Расписание занятий</label>
+                                <label><input type="checkbox" name="liked_aspects" value="peers"> Общение с однокурсниками</label>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            <fieldset>
+                <legend>Планы на будущее</legend>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="internship">Планируете ли вы проходить стажироваться?</label>
+                            <select id="internship" name="internship">
+                                <option value="yes">Да</option>
+                                <option value="no">Нет</option>
+                                <option value="maybe">Возможно</option>
+                            </select>
+                        </td>
+                        <td>
+                            <label for="suggestions">Что бы вы хотели сделать для университета?</label>
+                            <textarea id="suggestions" name="suggestions" rows="4" cols="38" placeholder="Ваши идеи..." ></textarea>
+                        </td>
+                    </tr>
+                </table>
+            </fieldset>
+            
+            <div class="button-container">
+                <button type="submit">Отправить ответы</button>
+            </div>
+    </form>
+</body>
+</html>
