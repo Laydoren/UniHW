@@ -25,7 +25,18 @@ footer{
 	height: 150px;
 	border: 5px solid black;
 	margin-top: 10px;
+}
 
+.footer-content {
+	margin-top: 23px;
+	text-align: center;
+	color: white;
+	line-height: 1.6;
+}
+
+.footer-content p {
+	margin: 5px 0;
+	font-size: 14pt;
 }
 
 .headmain{
@@ -49,7 +60,7 @@ footer{
     padding: 0;
     margin: 15% auto;
     max-width: 220px;
-    background: #2c3e50;
+    background: #8B0000;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -58,7 +69,7 @@ footer{
 	margin: 8px;
     padding: 14px 20px;
     color: white;
-    border-bottom: 1px solid #34495e;
-    background: #34495e;
+    border-bottom: 1px solid #A52A2A;
+    background: #B22222;
 
 }
