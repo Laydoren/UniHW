@@ -1,0 +1,57 @@
+body {
+    background-color: azure;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18pt;
+    color: firebrick;
+    border: 3px solid blue;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px
+}
+
+.flex {
+    border: 1px dashed black;
+    width: auto;
+    height: 100px;
+
+}
+
+.scale {
+    grid-column-start: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    height: auto;
+}
+
+.promo {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    height: auto;
+}
+
+.blog {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    height: auto;
+}
+
+header {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+main {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 500px;
+}
+
+footer {
+    grid-row-start: 3;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
