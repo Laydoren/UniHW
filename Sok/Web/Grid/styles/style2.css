@@ -8,55 +8,54 @@ body {
     margin: 10px auto;
 }
 
-
-.index-grid {
-    display: grid;
+.inner-grid {
     grid-template-columns: auto auto;
+    grid-template-rows: auto auto 100px;
+    display: grid;
     gap: 20px;
-
 }
 
-.inner-grid{
+.catalog-grid {
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
     display: grid;
-    grid-template-columns: auto auto;
     gap: 20px;
 }
 
 .flex {
     border: 1px dashed black;
-
-}
-
-.scale {
-    grid-column-start: 3;
-    grid-row-start: 1;
-    grid-row-end: 3;
-}
-
-.promo {
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-
-.blog {
-    grid-column-start: 1;
-    grid-column-end: 3;
 }
 
 header {
     grid-column-start: 1;
     grid-column-end: 4;
-    height: 100px;
-}
-
-main {
-    grid-column-start: 1;
-    grid-column-end: 4;
-    height: 800px;
+    min-height: 100px;
 }
 
 footer {
     grid-column-start: 1;
     grid-column-end: 4;
-    height: 100px;
+}
+
+main{
+    grid-column-start: 1;
+    grid-column-end: 4;
+    border: 3px solid green;
+}
+
+.filter {
+    grid-row: span 22;
+    
+}
+
+.sort {
+    grid-row: span 4;
+    grid-column-start: 2;
+    grid-column-end: 4;
+    
+}
+
+.product-card {
+    grid-column: span 1;
+    grid-row: span 6;
 }
