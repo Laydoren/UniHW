@@ -1,0 +1,129 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: darkgreen;
+    height: 100vh;
+    margin: 0;
+}
+
+.set {
+    display: flex;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    height: 460px;
+    width: 280px;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 20px;
+    position: relative;
+    transition: 0.2s;
+}
+
+.card:hover{
+    transform: translateY(-20px);
+    transition: 0.2s;
+}
+
+.card::before,
+.card::after {
+    position: absolute;
+    font-size: 4em;
+    font-weight: bold;
+}
+
+
+.card::before {
+    top: 10px;
+    left: 10px;
+}
+
+.card::after {
+    bottom: 10px;
+    right: 10px;
+    transform: rotate(180deg);
+}
+
+.icon{
+    font-size: 8em;
+    font-weight: bold;
+}
+
+.card:nth-child(1),
+.card:nth-child(2) {
+    color: red;
+}
+
+.heart::before,
+.heart::after {
+    color: red;
+}
+
+.heart::before {
+    content: "A\A♥";
+    white-space: pre;
+    text-align: center;
+}
+
+.heart::after {
+    content: "A\A♥";
+    white-space: pre;
+    text-align: center;
+}
+
+.diamond::before,
+.diamond::after {
+    color: red;
+}
+
+.diamond::before {
+    content: "A\A♦";
+    white-space: pre;
+    text-align: center;
+}
+
+.diamond::after {
+    content: "A\A♦";
+    white-space: pre;
+    text-align: center;
+}
+
+.club::before,
+.club::after {
+    color: black;
+}
+
+.club::before {
+    content: "A\A♣";
+    white-space: pre;
+    text-align: center;
+}
+
+.club::after {
+    content: "A\A♣";
+    white-space: pre;
+    text-align: center;
+}
+
+.spade::before,
+.spade::after {
+    color: black;
+}
+
+.spade::before {
+    content: "A\A♠";
+    white-space: pre;
+    text-align: center;
+}
+
+.spade::after {
+    content: "A\A♠";
+    white-space: pre;
+    text-align: center;
+}
