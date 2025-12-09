@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title></title>
+</head>
+<body>
+    <div id="root">
+        <div id="list-container" class="theme-default">
+            <h2 id="list-title" onclick="toggleTheme()">Список Задач</h2>
+            <p>Пункты списка, введенные пользователем через Prompt:</p>
+        </div>
+    </div>
+    
+    <button id="theme-toggle-button" onclick="toggleTheme()">Сменить Тему</button>
+
+    <script>
+        let listContainer = document.getElementById('list-container');
+        
+        function toggleTheme() {
+            listContainer.classList.toggle('theme-default');
+            listContainer.classList.toggle('theme-dark');
+        }
+
+        function createList() {
+            let ul = document.createElement('ul');
+            listContainer.appendChild(ul);
+
+            let listItemContent;
+            let counter = 1;
+
+            while (true) {
+                listItemContent = prompt(`Введите содержимое пункта ${counter} (или оставьте пустым для завершения):`);
+
+                if (listItemContent === null || listItemContent.trim() === '') {
+                    break; 
+                }
+
+                let li = document.createElement('li');
+                li.textContent = listItemContent.trim();
+                li.classList.add('list-item'); 
+                
+                ul.appendChild(li);
+
+                counter++;
+            }
+        }
+        
+        createList(); 
+    </script>
+</body>
+</html>

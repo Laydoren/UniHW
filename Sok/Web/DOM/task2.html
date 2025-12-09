@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <form name="search">
+    <label>Поиск по сайту:
+      <input type="text" name="search">
+    </label>
+    <input type="submit" value="Искать!">
+  </form>
+
+  <hr>
+
+  <form name="search-person">
+    Поиск по посетителям:
+    <table id="age-table">
+      <tr>
+        <td>Возраст:</td>
+        <td id="age-list">
+          <label>
+            <input type="radio" name="age" value="young">до 18</label>
+          <label>
+            <input type="radio" name="age" value="mature">18-50</label>
+          <label>
+            <input type="radio" name="age" value="senior">более 50</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Дополнительно:</td>
+        <td>
+          <input type="text" name="info[0]">
+          <input type="text" name="info[1]">
+          <input type="text" name="info[2]">
+        </td>
+      </tr>
+
+    </table>
+
+    <input type="submit" value="Искать!">
+  </form>
+</body>
+
+<script>
+  let labelsInTable = document.getElementById('age-table').querySelectorAll('label');
+  console.log('1. Labels in table:', labelsInTable);
+
+  let firstTableCell = document.getElementById('age-table').querySelectorAll('td');
+  console.log('2. First table cell:', firstTableCell[0]);
+
+  let secondForm = document.querySelectorAll('form'); 
+  console.log('3. Second form:', secondForm[1]);
+
+  let searchFormByName = document.forms.search;
+  console.log('4. Form by name "search":', searchFormByName);
+
+  let firstSearchInput = searchFormByName.getElementsByTagName('input')[0];
+  console.log('5. First input in "search" form:', firstSearchInput);
+
+  let info0Element = document.getElementsByName('info[0]');
+  console.log('6. Element by name "info[0]":', info0Element);
+
+  const searchPersonForm = document.forms['search-person'];
+  const info0Form = searchPersonForm.elements['info[0]'];
+  console.log('7. Element by name "info[0]" in "search-person" form:', info0Form);
+</script>
+
+</html>

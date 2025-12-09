@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+<body>
+
+  <form name="tasksForm">
+    <fieldset>
+      <legend>Задание 1: Квадратные чиселки</legend>
+      <label for="N1">Введите N:</label>
+      <input type="number" id="N1" name="N1" value="20">
+    </fieldset>
+
+    <fieldset>
+      <legend>Задание 2: Сред. ариф. по mod 3</legend>
+      <label for="A2">Введите a:</label>
+      <input type="number" id="A2" name="A2" value="-5">
+      <label for="B2">Введите b:</label>
+      <input type="number" id="B2" name="B2" value="12">
+    </fieldset>
+
+    <fieldset>
+      <legend>Задание 3: Степень 2</legend>
+      <label for="N3">Введитеr N:</label>
+      <input type="number" id="N3" name="N3" value="8">
+    </fieldset>
+
+    <fieldset>
+      <legend>Задание 4: Полезно при работе с CSS</legend>
+      <label for="Str4">Введите строку (пример: my-new-style):</label>
+      <input type="text" id="Str4" name="Str4" value="my-new-style">
+    </fieldset>
+
+    <br>
+
+    <p>Чтобы увидеть результат, перезагрите страницу</p>
+  </form>
+
+  <script>
+    let form = document.forms.tasksForm;
+    
+    function camelize(str) {
+        let parts = str.split('-');
+        
+        let result = parts[0];
+
+        for (let i = 1; i < parts.length; i++) {
+            let word = parts[i];
+            
+            if (word.length > 0) {
+              result += word.charAt(0).toUpperCase() + word.slice(1);
+            }
+        }
+        return result;
+    }
+
+
+    let N1 = parseInt(form.N1.value);
+
+    if (isNaN(N1) || N1 < 1) {
+        console.log("Task 1: Enter a correct natural number");
+    } else {
+        console.log(`\nTask 1`);
+        let i = 1;
+        let square = 1;
+
+        while (square <= N1) {
+            console.log(square);
+            i++;
+            square = i * i;
+        }
+    }
+
+
+    let a = parseInt(form.A2.value);
+    let b = parseInt(form.B2.value);
+    let start = 0;
+    let end = 0;
+    let sum = 0;
+    let count = 0;
+
+    if (isNaN(a) || isNaN(b)) {
+        console.log("Task 2: Enter correct numbers for a and b");
+    } else {
+        start = Math.min(a, b);
+        end = Math.max(a, b);
+
+        for (let i = start; i <= end; i++) {
+            if (i % 3 === 0) {
+                sum += i;
+                count++;
+            }
+        }
+        
+        console.log(`\nTask 2`);
+        if (count > 0) {
+            let average = sum / count;
+            console.log(`On the segment [${start}, ${end}], ${count} numbers divisible by 3 were found. Mean: ${average}`);
+        } else {
+            console.log(`There are no numbers divisible by 3 on the segment [${start}, ${end}].`);
+        }
+    }
+
+
+    let N3 = parseInt(form.N3.value);
+
+    if (isNaN(N3) || N3 < 1) {
+        console.log("Task 3: Please enter a correct natural number.");
+    } else {
+        console.log(`\nTask 3`);
+        if ((N3 > 0) && ((N3 & (N3 - 1)) === 0)) {
+            console.log(`YES`);
+        } else {
+            console.log(`NO`);
+        }
+    }
+
+
+    let Str4 = form.Str4.value;
+
+    console.log(`\nTask 4`);
+    console.log(`Input string from form: "${Str4}"`);
+    console.log(`Result: "${camelize(Str4)}"`);
+
+    console.log(`\ncamelize("background-color") == "${camelize("background-color")}"`);
+    console.log(`camelize("list-style-image") == "${camelize("list-style-image")}"`);
+    console.log(`camelize("-webkit-transition") == "${camelize("-webkit-transition")}"`);
+    
+  </script>
+
+</body>
+</html>
