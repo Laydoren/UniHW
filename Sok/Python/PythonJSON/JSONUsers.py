@@ -8,7 +8,7 @@ def create_users_file():
     print("Enter users data (enter empty login to stop adding)")
 
     while True:
-        print(f"\nUser #{len(users) + 1}:")
+        print(f"\nUser {len(users) + 1}:")
         login = input("Login: ").strip()
 
         if not login:
@@ -35,7 +35,7 @@ def create_users_file():
     with open("users.json", "w", encoding="utf-8") as file:
         json.dump(users, file, indent=2, ensure_ascii=False)
 
-    print(f"\nFile 'users.json' has been created!")
+    print("\nFile 'users.json' has been created!")
 
 
 def read_users_file():
@@ -75,8 +75,6 @@ def read_users_file():
     except Exception as e:
         print(f"Read error: {e}")
 
-
-
 while True:
     print("=" * 50)
     print("JSON Database")
@@ -94,4 +92,4 @@ while True:
         print("Goodbye world!")
         break
     else:
-        print("Wrong! Try again")
+        print("Yomayo, nu skazali tebe angliyskim yazykom 'Choose (1-3)'")

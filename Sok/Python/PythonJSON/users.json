@@ -1,47 +1,10 @@
 [
   {
     "id": 1,
-    "login": "John",
-    "email": "maybe@gmail.com",
-    "username": "johndoe",
+    "login": "Abona",
+    "email": "asd",
+    "username": "asd",
     "isActive": true,
-    "lastSeen": "20102025"
-
-  },
-
-  {
-    "id": 2,
-    "login": "Ola",
-    "email": "maybe@gmail.com",
-    "username": "Karbonara",
-    "isActive": false,
-    "lastSeen": "20102010"
-  },
-
-  {
-    "id": 3,
-    "login": "Lam",
-    "email": "maybe@gmail.com",
-    "username": "LamHoe",
-    "isActive": true,
-    "lastSeen": "20102025"
-  },
-
-  {
-    "id": 4,
-    "login": "Gorney",
-    "email": "maybe@gmail.com",
-    "username": "MAmamammmama",
-    "isActive": true,
-    "lastSeen": "01012001"
-  },
-
-  {
-    "id": 5,
-    "login": "John",
-    "email": "maybe@gmail.com",
-    "username": "johndoe",
-    "isActive": true,
-    "lastSeen": "20102025"
+    "lastSeen": "25112024"
   }
 ]

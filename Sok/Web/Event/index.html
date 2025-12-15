@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="./styles/style.css">
+	<title></title>
+</head>
+<body>
+	<div class="show">
+		<span onmousedown="showImage(this)" onmouseup="hideImage(this)">Название фото 1</span>
+		<img src="./images/1.jpg">
+	</div>
+	<div class="show">
+		<span onmousedown="showImage(this)" onmouseup="hideImage(this)">Название фото 2</span>
+		<img src="./images/2.jpg">
+	</div>
+	<div class="show">
+		<span onmousedown="showImage(this)" onmouseup="hideImage(this)">Название фото 3</span>
+		<img src="./images/3.jpg">
+	</div>
+	<div class="show">
+		<span onmousedown="showImage(this)" onmouseup="hideImage(this)">Название фото 4</span>
+		<img src="./images/4.jpg">
+	</div>
+
+	<script>
+
+		function showImage(titleElement) {
+
+		    const image = titleElement.nextElementSibling;
+		    image.classList.add('visible');
+		}
+
+		function hideImage(titleElement) {
+		    const image = titleElement.nextElementSibling;
+		    image.classList.remove('visible');
+		}
+	</script> 
+</body>
+</html>
