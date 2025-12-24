@@ -6,68 +6,75 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <!-- Часть первая: Навигация -->
+
     <header>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
         <nav class="navigation">
-            <a href="./index.html" class="nav-item">
+            <div class="nav-item">
                 <span class="icon">🎫</span>
                 <span>Билеты, отели, туры</span>
-            </a>
-            <a href="./index.html" class="nav-item">
+            </div>
+            <div class="nav-item">
                 <span class="icon">👔</span>
                 <span>Одежда и обувь</span>
-            </a>
-            <a href="./index.html" class="nav-item">
+            </div>
+            <div class="nav-item">
                 <span class="icon">📱</span>
                 <span>Электроника</span>
-            </a>
-            <a href="./index.html" class="nav-item">
+            </div>
+            <div class="nav-item">
                 <span class="icon">🏡</span>
                 <span>Дом и сад</span>
-            </a>
-            <a href="./index.html" class="nav-item">
+            </div>
+            <div class="nav-item">
                 <span class="icon">🧸</span>
                 <span>Детские товары</span>
-            </a>
-            <a href="./index.html" class="nav-item">
+            </div>
+            <div class="nav-item">
                 <span class="icon">⚡</span>
                 <span>Акции</span>
-            </a>
-            <a href="./index.html" class="nav-item">
+            </div>
+            <div class="nav-item">
                 <span class="icon">👑</span>
                 <span>Premium</span>
-            </a>
-            <a href="./index.html" class="nav-item">
+            </div>
+            <div class="nav-item">
                 <span class="icon">🎁</span>
                 <span>Подарочные сертификаты</span>
-            </a>
+            </div>
         </nav>
     </header>
 
     <main>
-        <!-- Баннеры -->
         <section class="banners">
             <div class="banner">
-                <img src="./images/gift.png" alt="Подарочные коробки">
+                <img src="./images/gift.png">
                 <div class="banner-label">ПОДАРОЧНЫЕ КОРОБКИ</div>
             </div>
             <div class="banner">
-                <img src="./images/light.jpg" alt="Гирлянды">
+                <img src="./images/light.jpg">
                 <div class="banner-label">ГИРЛЯНДЫ</div>
             </div>
             <div class="banner">
-                <img src="./images/kalendar.jpg" alt="Календари">
+                <img src="./images/kalendar.jpg">
                 <div class="banner-label">АДВЕНТ КАЛЕНДАРИ</div>
             </div>
         </section>
 
-        <!-- Популярные товары -->
+
         <section class="products-section">
             <h2>Популярные товары</h2>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./images/snowman.png" alt="Крепления для гирлянд">
+                        <img src="./images/snowman.png">
                     </div>
                     <div class="product-info">
                         <div class="product-price">
@@ -79,13 +86,12 @@
                             <span class="rating">★ 4.9</span>
                             <span class="reviews">• 617 оценок</span>
                         </div>
-                        <div class="product-delivery">Доставка <strong>да</strong></div>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./images/bird.png" alt="Новогодние открытки">
+                        <img src="./images/bird.png">
                     </div>
                     <div class="product-info">
                         <div class="product-price">
@@ -97,68 +103,62 @@
                             <span class="rating">★ 5</span>
                             <span class="reviews">• 18 598 оценок</span>
                         </div>
-                        <div class="product-delivery">Доставка <strong>послезавтра</strong></div>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./images/kalendar.jpg" alt="Копилка">
+                        <img src="./images/instax.jpg">
                     </div>
                     <div class="product-info">
                         <div class="product-price">
                             <span class="current-price">250 ₽</span>
                             <span class="old-price">500 ₽</span>
                         </div>
-                        <div class="product-title">Discont подарки / Копилка для ...</div>
+                        <div class="product-title">Картридж для фотоаппарата</div>
                         <div class="product-rating">
                             <span class="rating">★ 4.9</span>
                             <span class="reviews">• 7 034 оценки</span>
                         </div>
-                        <div class="product-delivery">Доставка <strong>завтра</strong></div>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./images/kalendar.jpg" alt="Крючки">
+                        <img src="./images/yes.png">
                     </div>
                     <div class="product-info">
                         <div class="product-price">
                             <span class="current-price">224 ₽</span>
                             <span class="old-price">1 120 ₽</span>
                         </div>
-                        <div class="product-title">Brilha / Набор крючков самокл...</div>
+                        <div class="product-title">Куртка H&M</div>
                         <div class="product-rating">
                             <span class="rating">★ 4.7</span>
                             <span class="reviews">• 2 106 оценок</span>
                         </div>
-                        <div class="product-delivery">Доставка <strong>послезавтра</strong></div>
                     </div>
                 </div>
 
                 <div class="product-card">
                     <div class="product-image">
-                        <img src="./images/kalendar.jpg" alt="Гирлянда">
+                        <img src="./images/tree.png">
                     </div>
                     <div class="product-info">
                         <div class="product-price">
                             <span class="current-price">323 ₽</span>
                             <span class="old-price">1 711 ₽</span>
                         </div>
-                        <div class="product-title">Гирлянда Новогодняя Роса /вфывфывфвфыв</div>
+                        <div class="product-title">Ёлка новогодняя</div>
                         <div class="product-rating">
                             <span class="rating">★ 4.7</span>
                             <span class="reviews">• 1 838 оценок</span>
                         </div>
-                        <div class="product-delivery">Доставка <strong>завтра</strong></div>
                     </div>
                 </div>
-
 
             </div>
         </section>
     </main>
-
 </body>
 </html>

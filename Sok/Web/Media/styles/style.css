@@ -7,7 +7,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Навигация */
+
 header {
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -21,7 +21,6 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 15px 20px;
-    overflow-x: auto;
     gap: 10px;
 }
 
@@ -29,17 +28,15 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: none;
     color: #333;
     padding: 10px 15px;
     border-radius: 8px;
     transition: background-color 0.3s;
-    white-space: nowrap;
     min-width: 100px;
 }
 
 .nav-item:hover {
-    background-color: #f0f0f0;
+    background-color: whitesmoke;
 }
 
 .nav-item .icon {
@@ -47,19 +44,13 @@ header {
     margin-bottom: 5px;
 }
 
-.nav-item span:last-child {
-    font-size: 12px;
-    text-align: center;
-}
 
-/* Основной контент */
 main {
     max-width: 1400px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* Баннеры */
 .banners {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -98,7 +89,8 @@ main {
     font-size: 16px;
 }
 
-/* Секция товаров */
+
+
 .products-section {
     margin-top: 40px;
 }
@@ -116,6 +108,8 @@ main {
 }
 
 .product-card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
@@ -132,7 +126,6 @@ main {
     position: relative;
     width: 100%;
     height: 220px;
-    background-color: #f9f9f9;
 }
 
 .product-image img {
@@ -188,11 +181,83 @@ main {
     color: #999;
 }
 
-.product-delivery {
-    font-size: 13px;
-    color: #666;
+
+
+.menu-toggle, .hamburger {
+    display: none;
 }
 
-.product-delivery strong {
-    color: #4caf50;
+
+@media (max-width: 768px) {
+    
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 30px;
+        height: 25px;
+        cursor: pointer;
+        padding: 15px;
+        z-index: 1001;
+        position: relative;
+    }
+
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        border-radius: 2px;
+        transition: 0.3s;
+    }
+
+    .navigation {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 250px;
+        height: 100vh;
+        background-color: white;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 60px 20px;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+        transition: 0.4s ease;
+        z-index: 1000;
+    }
+
+    .menu-toggle:checked ~ .navigation {
+        left: 0;
+    }
+
+    .nav-item {
+        width: 100%;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 15px 0;
+        border-bottom: 1px solid whitesmoke;
+    }
+
+    .banners, 
+    .products-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .banner img {
+        height: 200px;
+    }
+
+
+    .product-card {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-image {
+        height: 250px;
+    }
 }
