@@ -22,7 +22,7 @@ body {
 }
 
 #list-container.theme-default li.list-item::before {
-    content: '⭐';
+    content: '✅';
     position: absolute;
     left: 5px;
     top: 50%;
@@ -49,7 +49,7 @@ body {
 }
 
 #list-container.theme-dark li.list-item::before {
-    content: '✅';
+    content: '⭐';
     position: absolute;
     left: 5px;
     top: 50%;

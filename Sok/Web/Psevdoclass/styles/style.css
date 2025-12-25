@@ -101,7 +101,7 @@ header {
 
 .backg img{
     width: 100%;
-    height: 1000px; /* или любая фиксированная высота */
+    height: 1000px;
     object-fit: cover;
     filter: blur(0px);
     z-index: 0;

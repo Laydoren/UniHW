@@ -12,14 +12,14 @@ body{
     display: none; 
 }
 
-/* Добавляем класс, чтобы изображение стало видимым */
+
 .show img.visible {
     display: block; 
     max-width: 100%;
     height: auto;
 }
 
-/* Стили для названия (опционально) */
+
 .show span {
     cursor: pointer;
     display: block; 
