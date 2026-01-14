@@ -22,12 +22,10 @@ class BirthInfo:
         today = date.today()
         age = today.year - self.birth_date.year
 
-        if (today.month, today.day) <= (self.birth_date.month, self.birth_date.day):
+        if (today.month, today.day) < (self.birth_date.month, self.birth_date.day):
             age -= 1
 
         return age
 
-b1 = BirthInfo(date(2005, 7, 25))
-b2 = BirthInfo("2012-01-01")
+b1 = BirthInfo(date(2000, 1, 14))
 print(b1.age)
-print(b2.age)
